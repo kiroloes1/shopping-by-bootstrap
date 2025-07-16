@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- خط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      body {
+        font-family: 'Cairo', sans-serif;
+      }
+
+      header section {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <title>موقع باستخدام Bootstrap وخط Cairo</title>
+  </head>
+  <body class="scroll-box">
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">ستار</a>
+    
+    <!-- زر القائمة يظهر في الشاشات الصغيرة -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- القوائم -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light fw-medium" href="./index.html">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fw-medium" href="#footer">من نحن</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            صفحات
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">صفحة 1</a></li>
+            <li><a class="dropdown-item" href="#">صفحة 2</a></li>
+            <li><a class="dropdown-item" href="#">صفحة 3</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">صفحة 4</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fw-medium" href="#Contact">تواصل</a>
+        </li>
+
+        <li  class="nav-item">
+          <a class="nav-link text-light fw-medium" href="#product">المنتجات</a>
+        </li>
+        <li class="nav-item">
+          <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div style="width: 15rem;" class="scroll-box offcanvas offcanvas-start p-3 overflow-auto" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+      <div class="offcanvas-header d-flex justify-content-center flex-wrap">
+
+
+<div class="text-center mt-3">
+  <h4>طلباتك</h4>
+</div>
+
+<div class="card" style="width: 10rem;" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f7.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">قميص صيفي</h5>
+    <p class="text-success">40$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f6.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">تيشيرت رجالي</h5>
+    <p class="text-success">10$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f5.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">بلوزة أنيقة</h5>
+    <p class="text-success">50$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f4.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">فستان خفيف</h5>
+    <p class="text-success">12$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f3.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">جاكيت رياضي</h5>
+    <p class="text-success">20$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f2.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">بنطال جينز</h5>
+    <p class="text-success">40$</p>
+  </div>
+</div>
+
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f1.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">معطف شتوي</h5>
+    <p class="text-success">70$</p>
+  </div>
+</div>
+<div class="card" style="width: 10rem;"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="./pic/products/f1.jpg" class="card-img-top" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">معطف شتوي</h5>
+    <p class="text-success">70$</p>
+  </div>
+</div>
+
+   
+   <hr style="height: 1px; background-color: black; width: 100%;">
+<div class="text-center mt-3">
+  <h4>الإجمالي: <span id="total-price">0</span>$</h4>
+</div>
+
+<div class="text-center mt-3 btn btn-success ">
+  <h4 class="fs-5">تأكيد طلبك</h4>
+</div>
+
+  </div>
+ 
+</div>
+
+    <!-- Carousel -->
+    <header class="pt-5 mt-4">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="./pic/hero4.png" class="d-block w-100" style="height: 60vh;" alt="...">
+            <div class=" d-none d-md-block bg-body-secondary rounded-3 opacity-75  my-3 carousel-caption">
+              <h5>مرحبًا بكم</h5>
+              <p>نقدم أفضل المنتجات بأعلى جودة.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./pic/b10.jpg" class="d-block w-100" style="height: 60vh;" alt="...">
+            <div class=" d-none d-md-block bg-body-secondary rounded-3 opacity-75  my-3 carousel-caption">
+              <h5>جودة عالية</h5>
+              <p>تشكيلة واسعة من الإلكترونيات بأفضل الأسعار.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./pic/b16.jpg" class="d-block w-100" style="height: 60vh;" alt="...">
+            <div class=" d-none d-md-block bg-body-secondary rounded-3 opacity-75  my-3 carousel-caption">
+              <h5>خدمة عملاء مميزة</h5>
+              <p>نحن هنا لخدمتك على مدار الساعة.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span><i class="fa-solid fa-angles-left fs-3 text-dark"></i></span>
+          <span class="visually-hidden">السابق</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span><i class="fa-solid fa-angles-right fs-3 text-dark"></i></span>
+          <span class="visually-hidden">التالي</span>
+        </button>
+      </div>
+
+      <!-- قسم ترحيبي -->
+      <section class="container text-center my-5">
+        <h2 class="fw-bold mb-3">أهلاً وسهلاً بكم في متجرنا</h2>
+        <p class="lead">نسعى دائمًا لتوفير أفضل المنتجات والخدمات لعملائنا الكرام. استعرض مجموعتنا الرائعة من المنتجات واستمتع بتجربة تسوق لا مثيل لها.</p>
+      </section>
+    </header>
+    
+    <main>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between p-4">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">المنتج الخاص بك</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div style="width: 100%; max-width: 700px; margin: auto;" class="modal-body row">
+<!-- Carousel -->
+<div id="productCarousel" class="carousel slide col-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./pic/products/f5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./pic/products/f6.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./pic/products/f7.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+
+  <!-- أزرار التحكم بعد التصحيح -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span><i class="fa-solid fa-angles-left fs-3 text-dark"></i></span>
+    <span class="visually-hidden">السابق</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span><i class="fa-solid fa-angles-right fs-3 text-dark"></i></span>
+    <span class="visually-hidden">التالي</span>
+  </button>
+</div>
+
+        <!-- Product Info -->
+        <div class="col-7">
+          <h2>تيشيرت</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus tempore quis quos laboriosam repellendus ullam vitae! Quisquam, doloribus totam.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-around">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section id="product" class="my-5 d-flex flex-column align-items-center container-fluid">
+  <h2 class="mb-4">المنتجات</h2>
+
+  <div class="btn-group mb-4" role="group" aria-label="فلترة المنتجات">
+    <button type="button" class="btn btn-primary m-1 active" data-filter="all">الكل</button>
+    <button type="button" class="btn btn-primary m-1" data-filter="bestseller">الأكثر مبيعًا</button>
+    <button type="button" class="btn btn-primary m-1" data-filter="new">الأحدث</button>
+    <button type="button" class="btn btn-primary m-1" data-filter="discount">الخصومات</button>
+  </div>
+
+  <!-- سيتم هنا عرض المنتجات -->
+  <div class="row gap-3 justify-content-center" id="product-container">
+
+   <!-- بطاقة 1 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f1.jpg" class="card-img-top" alt="قميص رجالي">
+      <div class="card-body">
+        <h5 class="card-title">قميص رجالي كلاسيك</h5>
+        <p class="card-text">قميص أنيق مصنوع من القطن الخالص، مناسب لجميع المناسبات.</p>
+        <p class="text-success fw-bold">السعر: 250 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 2 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f2.jpg" class="card-img-top" alt="بنطال جينز">
+      <div class="card-body">
+        <h5 class="card-title">بنطال جينز</h5>
+        <p class="card-text">بنطال عملي بستايل عصري، متين ومريح.</p>
+        <p class="text-success fw-bold">السعر: 300 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 3 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f3.jpg" class="card-img-top" alt="تيشيرت قطن">
+      <div class="card-body">
+        <h5 class="card-title">تيشيرت قطن</h5>
+        <p class="card-text">تيشيرت بألوان متعددة، قماش ناعم ومريح.</p>
+        <p class="text-success fw-bold">السعر: 150 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 4 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f4.jpg" class="card-img-top" alt="جاكيت شتوي">
+      <div class="card-body">
+        <h5 class="card-title">جاكيت شتوي</h5>
+        <p class="card-text">جاكيت دافئ وأنيق لفصل الشتاء.</p>
+        <p class="text-success fw-bold">السعر: 500 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 5 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f5.jpg" class="card-img-top" alt="حذاء رياضي">
+      <div class="card-body">
+        <h5 class="card-title">حذاء رياضي</h5>
+        <p class="card-text">حذاء خفيف ومتين للأنشطة اليومية والرياضة.</p>
+        <p class="text-success fw-bold">السعر: 400 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 6 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f6.jpg" class="card-img-top" alt="شنطة جلد">
+      <div class="card-body">
+        <h5 class="card-title">شنطة جلد</h5>
+        <p class="card-text">شنطة أنيقة مناسبة للعمل أو الجامعة.</p>
+        <p class="text-success fw-bold">السعر: 350 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 7 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f7.jpg" class="card-img-top" alt="نظارة شمس">
+      <div class="card-body">
+        <h5 class="card-title">نظارة شمسية</h5>
+        <p class="card-text">نظارة بأطارات أنيقة وعدسات تحمي من الأشعة فوق البنفسجية.</p>
+        <p class="text-success fw-bold">السعر: 180 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- بطاقة 8 -->
+    <div class="card col-10 col-md-5 col-lg-3" style="height: auto; width: 17rem;">
+      <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f8.jpg" class="card-img-top" alt="ساعة يد">
+      <div class="card-body">
+        <h5 class="card-title">ساعة يد رجالي</h5>
+        <p class="card-text">ساعة أنيقة بعقارب معدنية وسوار جلدي.</p>
+        <p class="text-success fw-bold">السعر: 600 جنيه</p>
+      </div>
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="nav-link text-light fw-medium" href="#">
+          <i class="fa-solid fa-cart-shopping btn btn-info fs-4"></i>
+        </a>
+        <a href="#" class="m-1 btn btn-success d-flex text-light">تفاصيل</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="Contact" class="contact-us d-flex  my-5 container">
+  <div class="w-100  d-flex flex-column align-items-center">
+    <h2>تواصل معنا</h2>
+    <p>يرجى تعبئة النموذج التالي للتواصل معنا:</p>
+    
+    <form class="w-100 bg-body-secondary p-3 row justify-content-center">
+      <div class="mb-3 col-12 col-md-5">
+        <label for="name" class="form-label">الاسم</label>
+        <input type="text" class="form-control" id="name" placeholder="أدخل اسمك">
+      </div>
+      <div class="mb-3 col-12 col-md-5">
+        <label for="email" class="form-label">البريد الإلكتروني</label>
+        <input type="email" class="form-control" id="email" placeholder="example@email.com">
+      </div>
+      <div class="mb-3 col-12 col-md-5">
+        <label for="message" class="form-label">الرسالة</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="اكتب رسالتك هنا"></textarea>
+      </div>
+
+      <div class="text-center container col-12 ">
+      <button type="submit" class="btn btn-primary w-25">إرسال</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<section class="order container p-5 my-5">
+    <div class="w-100  d-flex flex-column align-items-center">
+  <h2>طلبيه خاصه</h2>
+
+      <form class="row form bg-body-secondary w-100 justify-content-center p-3">
+        <div class="col-12 col-md-5">
+      <div class="mb-3">
+        <label for="name" class="form-label">الاسم</label>
+        <input type="text" class="form-control" id="name" placeholder="أدخل اسمك">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">البريد الإلكتروني</label>
+        <input type="email" class="form-control" id="email" placeholder="example@email.com">
+      </div>
+      </div>
+
+      <div class="col-12 col-md-5">
+
+          <div class="mb-3">
+        <label for="message" class="form-label">الرسالة</label>
+        <input type="tel" class="form-control">
+      </div>
+
+          <div class=" mb-3">
+        <label for="message" class="form-label">الرسالة</label>
+        <textarea class="form-control" id="message" rows="1" placeholder="اكتب رسالتك هنا"></textarea>
+      </div>
+      </div>
+    
+
+      <div class="col-12 col-md-5 text-center container">
+      <button type="submit" class="btn btn-primary w-25">إرسال</button>
+      </div>
+    </form>
+</div>
+</section>
+
+<section class="best-order py-4 text-center bg-light d-flex flex-column align-items-center">
+  <h2 class="mb-4">المنتجات الأكثر طلبًا</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      <!-- العمود الأول -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f5.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">جاكيت شتوي</p>
+            <p class="mb-0 text-muted">45$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f2.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">قميص رجالي</p>
+            <p class="mb-0 text-muted">30$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f4.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">بلوفر صوف</p>
+            <p class="mb-0 text-muted">35$</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- العمود الثاني -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f3.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">بنطال كاجوال</p>
+            <p class="mb-0 text-muted">40$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f6.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">تيشيرت صيفي</p>
+            <p class="mb-0 text-muted">25$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f7.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">حذاء رياضي</p>
+            <p class="mb-0 text-muted">55$</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- العمود الثالث -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f1.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">قبعة شتوية</p>
+            <p class="mb-0 text-muted">15$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f8.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">حقيبة جلد</p>
+            <p class="mb-0 text-muted">60$</p>
+          </div>
+        </div>
+        <div class="product-item d-flex align-items-center border rounded p-2 mb-2 bg-white">
+          <img type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" src="./pic/products/f6.jpg" class="img-thumbnail me-2" style="width: 60px;">
+          <div>
+            <p class="mb-0 fw-bold">نظارة شمس</p>
+            <p class="mb-0 text-muted">20$</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="Politics py-4 text-center bg-light d-flex flex-column align-items-center">
+  <h2>سياسة الموقع</h2>
+  <div class="container row p-2 justify-content-center bg-body-secondary">
+
+    <p class="d-flex justify-content-center gap-1 ">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#policy1" aria-expanded="false" aria-controls="policy1">
+        سياسة الخصوصية
+      </button>
+    </p>
+    <div class="collapse" id="policy1">
+      <div class="card card-body">
+        هذا نص تجريبي لسياسة الخصوصية...
+      </div>
+    </div>
+
+    <p class="d-flex justify-content-center gap-1">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#policy2" aria-expanded="false" aria-controls="policy2">
+        شروط الاستخدام
+      </button>
+    </p>
+    <div class="collapse" id="policy2">
+      <div class="card card-body">
+        هذا نص تجريبي لشروط الاستخدام...
+      </div>
+    </div>
+
+    <p class="d-flex justify-content-center gap-1">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#policy3" aria-expanded="false" aria-controls="policy3">
+        سياسة الإرجاع
+      </button>
+    </p>
+    <div class="collapse" id="policy3">
+      <div class="card card-body">
+        هذا نص تجريبي لسياسة الإرجاع...
+      </div>
+    </div>
+
+    <p class="d-flex justify-content-center gap-1">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#policy4" aria-expanded="false" aria-controls="policy4">
+        سياسة الدفع
+      </button>
+    </p>
+    <div class="collapse" id="policy4">
+      <div class="card card-body">
+        هذا نص تجريبي لسياسة الدفع...
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="service py-4 text-center bg-light d-flex flex-column align-items-center">
+  <h2>خدماتنا</h2>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      
+      <!-- خدمة التصميم -->
+      <div class="col-md-4">
+        <i class="fas fa-paint-brush service-icon"></i>
+        <p>نقدم تصميمات عصرية وجذابة لواجهات المستخدم.</p>
+      </div>
+
+      <!-- خدمة البرمجة -->
+      <div class="col-md-4">
+        <i class="fas fa-code service-icon"></i>
+        <p>برمجة مواقع وتطبيقات احترافية بأحدث التقنيات.</p>
+      </div>
+
+      <!-- خدمة الدعم -->
+      <div class="col-md-4">
+        <i class="fas fa-headset service-icon"></i>
+        <p>دعم فني مستمر للحفاظ على جودة الأداء.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    </main>
+
+    <footer id="footer" class="bg-dark text-white pt-4 pb-2 mt-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      
+      <!-- العمود الأول: معلومات عامة -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">عن المتجر</h5>
+        <p>
+          متجرنا يقدم أفضل المنتجات العصرية بأسعار تنافسية وجودة عالية. هدفنا هو رضا عملائنا دائمًا.
+        </p>
+      </div>
+
+      <!-- العمود الثاني: روابط سريعة -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">روابط سريعة</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">الرئيسية</a></li>
+          <li><a href="#" class="text-white text-decoration-none">المنتجات</a></li>
+          <li><a href="#" class="text-white text-decoration-none">من نحن</a></li>
+          <li><a href="#" class="text-white text-decoration-none">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود الثالث: تواصل معنا -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">تواصل معنا</h5>
+        <p class="mb-1"><i class="bi bi-telephone"></i> 0123-456-789</p>
+        <p class="mb-1"><i class="bi bi-envelope"></i> example@email.com</p>
+        <p><i class="bi bi-geo-alt"></i> القاهرة، مصر</p>
+      </div>
+    </div>
+
+    <hr class="bg-light">
+
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 جميع الحقوق محفوظة - متجرك</p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+
+
+
+    <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    let prices = document.querySelectorAll('.card .text-success');
+    let total = 0;
+
+    prices.forEach(p => {
+      let priceText = p.textContent.trim().replace('$', '');
+      let price = parseFloat(priceText);
+      if (!isNaN(price)) {
+        total += price;
+      }
+    });
+
+    document.getElementById('total-price').textContent = total.toFixed(2);
+  });
+</script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
